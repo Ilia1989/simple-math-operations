@@ -1,0 +1,92 @@
+package app;
+
+import work.Operations;
+
+public class Application extends Operations {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * The operations Object that will call the functions
+		 * by the op instance
+		 */
+		Operations op = new Operations();
+		
+		// integers summing
+		int a = op.summation(5, 5);
+		System.out.printf("summing %d and %d: %d\n", 5, 5, a);
+		
+		// integers subtracting 
+		int b = op.subtraction(12, 5);
+		System.out.println("subtracting: " + b);
+		
+		// integers division with chance to get floating point digit
+		division(7,2);
+		
+		// integers multiplication 
+		int d = op.multiplication(12, 5);
+		System.out.println("multiplication: " + d);
+		
+		System.out.println();// adding an empty row
+		
+		//doubles summing
+		double a1 = op.summation(5.0, 5.0);
+		System.out.println("summing: " + a1);
+		
+		//doubles subtracting
+		double b1 = op.subtraction(12.4, 5.3);
+		System.out.printf("subtracting: %.2f\n", b1);
+		
+		// doubles division
+		double c1 = op.division(12.4, 6.2);
+		System.out.println("divisioning: " + c1);
+		
+		// doubles  multiplication
+		double d1 = op.multiplication(5.6, 4.9);
+		System.out.println("multiplication: " + d1);
+		
+		System.out.println();// adding an empty row
+		
+		// Operations using properties from Values class
+		
+		// integers sum  
+		System.out.println("sum integers: "
+				+ op.summation(op.getA(), op.getB()));
+		
+		// integers subtraction
+		System.out.println("subtraction integers: "
+				+ op.subtraction(op.getA(), op.getB()));
+		
+		// integers multiplication
+		System.out.println("multiplication integers: "
+				+ op.multiplication(op.getA(), op.getB()));
+		
+		// integers division
+		division(op.getA(),op.getB());
+		
+		System.out.println();// adding an empty row
+
+		//doubles summing
+		System.out.printf("sum floating points: %.2f\n", 
+				op.summation(op.getC(), op.getD()));
+		
+		// doubles subtraction
+		System.out.printf("subtraction floating points: %.2f\n", 
+				op.subtraction(op.getC(), op.getD()));
+		
+		// doubles multiplication
+		System.out.printf("multiplication floating point: %.2f\n", 
+				op.multiplication(op.getC(), op.getD()));
+		
+		// doubles division
+		System.out.printf("division floating point: %.2f\n",
+				op.division(op.getC(), op.getD()));
+		
+		System.out.println(); // adding an empty row
+		
+		// program message
+		System.out.println("Thank you, have a nice day!");
+		
+	}
+
+}
