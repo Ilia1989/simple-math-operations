@@ -1,0 +1,105 @@
+package work;
+
+import interfaces.IOperations;
+
+/**
+ * @author Ilko
+ *
+ */
+public class Operations extends Values implements IOperations {
+
+	public Operations() {
+
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see interfaces.IOperations#subtraction(int, int)
+	 */
+	@Override
+	public int subtraction(int a, int b) {
+		int result = a - b;
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see interfaces.IOperations#summation(int, int)
+	 */
+	@Override
+	public int summation(int a, int b) {
+		int result = a + b;
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see interfaces.IOperations#multyplication(int, int)
+	 */
+	@Override
+	public int multiplication(int a, int b) {
+		int result = a * b;
+		return result;
+	}
+
+	/**
+	 * @param a
+	 * @param b
+	 */
+	public static void division(int a, int b) {
+		if ((a % b) == 0) {
+			int result = a / b;
+			System.out.printf("division: %d\n", result);
+		} else {
+			double result = ((a * 1.0) / (b * 1.0));
+			System.out.printf("division: %.2f\n", result);
+		}
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see interfaces.IOperations#subtraction(double, double)
+	 */
+	@Override
+	public double subtraction(double a, double b) {
+		double result = a - b;
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see interfaces.IOperations#summation(double, double)
+	 */
+	@Override
+	public double summation(double a, double b) {
+		double result = a + b;
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see interfaces.IOperations#multyplication(double, double)
+	 */
+	@Override
+	public double multiplication(double a, double b) {
+		double result = a * b;
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see interfaces.IOperations#devidion(double, double)
+	 */
+	@Override
+	public double division(double a, double b) {
+		double result = a / b;
+		return result;
+	}
+}
