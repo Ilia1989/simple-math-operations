@@ -46,9 +46,11 @@ public class Operations extends Values implements IOperations {
 	}
 
 	/**
-	 * @param a
-	 * @param b
+	 * (non-Javadoc)
+	 *
+	 * @see interfaces.IOperations#division(int, int) 
 	 */
+	 @Override
 	public static void division(int a, int b) {
 		if((a % b) != 0){
 		    double res = ((double)a / b);
