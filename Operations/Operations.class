@@ -50,12 +50,12 @@ public class Operations extends Values implements IOperations {
 	 * @param b
 	 */
 	public static void division(int a, int b) {
-		if ((a % b) == 0) {
-			int result = a / b;
-			System.out.printf("division: %d\n", result);
+		if((a % b) != 0){
+		    double res = ((double)a / b);
+		    System.out.printf("Division: %.2f", res);
 		} else {
-			double result = ((a * 1.0) / (b * 1.0));
-			System.out.printf("division: %.2f\n", result);
+		    int res = a / b;
+		    System.out.println("Division: " + res);
 		}
 	}
 
