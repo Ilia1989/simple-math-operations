@@ -11,6 +11,8 @@ public interface IOperations {
 	public int summation(int a, int b);
 	
 	public int multiplication(int a, int b);
+	
+	public static void division(int a, int b);
 
 	public double subtraction(double a, double b);
 	
